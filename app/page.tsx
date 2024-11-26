@@ -1,6 +1,6 @@
 'use client'
 import { Button } from "@/components/ui/button"
-import { VStack, Icon } from "@chakra-ui/react"
+import { VStack, Icon, Box } from "@chakra-ui/react"
 import { useState, useEffect } from "react"
 import { TbTriangleInvertedFilled } from "react-icons/tb"
 
@@ -159,16 +159,19 @@ export default function Page() {
   return (
     <VStack>
 
-      <canvas
-        id="wheel"
-        width="500"
-        height="500"
-        style={{
+      <Box bgImage="url(images/background.png)">
+        <canvas
+          id="wheel"
+          width="500"
+          height="500"
+          style={{
 
-          WebkitTransform: `rotate(${rotate}deg)`,
-          WebkitTransition: `-webkit-transform ${easeOut}s ease-out`
-        }}
-      />
+            WebkitTransform: `rotate(${rotate}deg)`,
+            WebkitTransition: `-webkit-transform ${easeOut}s ease-out`
+          }}
+        />
+
+      </Box>
       <Icon style={{ position: "absolute", top: 40 }} color="white" fontSize="2xl">
         <TbTriangleInvertedFilled />
       </Icon>
