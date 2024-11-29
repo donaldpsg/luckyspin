@@ -81,7 +81,7 @@ export default function Page() {
             const endAngle = start + arc;
             const angle = index * arc;
             const baseSize = radius * 3.33;
-            const textRadius = baseSize - 125;
+            const textRadius = baseSize - 130; // posisi huruf dari tengah ke tepi
 
             if (ctx) {
                 ctx.beginPath();
@@ -254,7 +254,7 @@ export default function Page() {
                         />
                         <Image
                             src={logo}
-                            style={{ position: "absolute", top: 370, width: 100 }}
+                            style={{ position: "absolute", top: 355, width: 80 }}
                             onClick={spin}
                             alt="Logo"
                         />
