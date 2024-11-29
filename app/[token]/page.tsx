@@ -225,8 +225,8 @@ export default function Page() {
                         </Flex>
                     ) : (
                         <>
-                            <Heading size="xl" style={{ position: "absolute", top: 110 }} className={roboto.className} color="red.700">HI, {nama_client.toUpperCase()}</Heading>
-                            <Center style={{ position: "absolute", top: 140 }} bg="red.700" color='white' width='60%'>
+                            <Heading size="xl" style={{ position: "absolute", top: 105 }} className={roboto.className} color="red.700">HI, {nama_client.toUpperCase()}</Heading>
+                            <Center style={{ position: "absolute", top: 135 }} bg="red.700" color='white' width='60%'>
                                 <Heading className={roboto.className} letterSpacing={1}> Spin the wheel to win!</Heading>
                             </Center>
                         </>
@@ -238,7 +238,7 @@ export default function Page() {
                     width="500"
                     height="500"
                     style={{
-                        marginTop: 130,
+                        marginTop: 120,
                         WebkitTransform: `rotate(${rotate}deg)`,
                         WebkitTransition: `-webkit-transform ${easeOut}s ease-out`,
                     }}
@@ -248,7 +248,7 @@ export default function Page() {
                     <>
                         <Image
                             src="/images/pointer.png"
-                            style={{ position: "absolute", top: 190, width: 20 }}
+                            style={{ position: "absolute", top: 180, width: 20 }}
                             onClick={spin}
                             alt="Pointer"
                         />
@@ -266,7 +266,7 @@ export default function Page() {
                     <>
                         <Image src="/images/confetti.gif" alt="Confetti" height={690} style={{ position: "absolute", top: 0, left: 250 }} />
                         <Image src="/images/confetti.gif" alt="Confetti" height={690} style={{ position: "absolute", top: 0, right: 250 }} />
-                        <Heading color="red.700" size="xl" style={{ marginTop: -50 }}>CONGRATULATIONS! YOU WON</Heading>
+                        <Heading color="red.700" size="xl" style={{ marginTop: -60 }}>CONGRATULATIONS! YOU WON</Heading>
                         <Center bg="red.700" color='white' width='60%' pb={1}>
                             <Heading color="white" size="xl">{data[result].label.toUpperCase()}</Heading>
                         </Center>
@@ -278,7 +278,7 @@ export default function Page() {
                 )}
 
                 {result > -1 && (
-                    <Link color="red.700" onClick={download}>Download Result</Link>
+                    <Link color="red.700" mb={2} onClick={download}>Download Result</Link>
                 )}
 
             </VStack>
