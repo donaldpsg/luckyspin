@@ -23,7 +23,7 @@ export default function Page() {
     const [logo, setLogo] = useState('/images/logo-spin.png')
     const [loading, setLoading] = useState(true)
     const params = useParams<{ token: string }>()
-    const url_api = "http://localhost:8000/public/lucky_spin"
+    const url_api = "https://visa.peaksolutions.co.id/api/public/public/lucky_spin"
     const token = params.token
 
     const radius = 75;
