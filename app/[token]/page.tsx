@@ -264,7 +264,8 @@ export default function Page() {
 
                 {result > -1 && (
                     <>
-                        <Image src="/images/confetti.gif" alt="Confetti" height={750} style={{ position: "absolute", top: 0, }} />
+                        <Image src="/images/confetti.gif" alt="Confetti" height={690} style={{ position: "absolute", top: 0, left: 250 }} />
+                        <Image src="/images/confetti.gif" alt="Confetti" height={690} style={{ position: "absolute", top: 0, right: 250 }} />
                         <Heading color="red.700" size="xl" style={{ marginTop: -50 }}>CONGRATULATIONS! YOU WON</Heading>
                         <Center bg="red.700" color='white' width='60%' pb={1}>
                             <Heading color="white" size="xl">{data[result].label.toUpperCase()}</Heading>
