@@ -273,11 +273,11 @@ export default function Page() {
                         </Center>
                         {data[result].type === 0 ? (
                             <Text style={{ textAlign: "center" }} px={8} fontSize={14}>
-                                Your reward has been recorded or you can send the result directly to us. Share the joy with us on Instagram <Link href="https://instagram.com/peaksolutionsgroup?igshid=YmMyMTA2M2Y=" color="red.700">@peakasolutionsgroup</Link>!
+                                Your reward has been recorded or you can send the result directly to us. Share the joy with us on Instagram <Link href="https://instagram.com/peaksolutionsgroup?igshid=YmMyMTA2M2Y=" color="red.700">@peaksolutionsgroup</Link>!
                             </Text>
                         ) : (
                             <Text style={{ textAlign: "center" }} px={8} fontSize={14}>
-                                Your reward has been recorded. The prize is waiting! Claim your prize at our office and share the joy with us on Instagram <Link href="https://instagram.com/peaksolutionsgroup?igshid=YmMyMTA2M2Y=" color="red.700">@peakasolutionsgroup</Link>!
+                                Your reward has been recorded. The prize is waiting! Claim your prize at our office and share the joy with us on Instagram <Link href="https://instagram.com/peaksolutionsgroup?igshid=YmMyMTA2M2Y=" color="red.700">@peaksolutionsgroup</Link>!
                             </Text>
                         )}
 
