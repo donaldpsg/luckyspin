@@ -81,15 +81,15 @@ export default function Page() {
             const endAngle = start + arc;
             const angle = index * arc;
             const baseSize = radius * 3.33;
-            const textRadius = baseSize - 120;
+            const textRadius = baseSize - 125;
 
             if (ctx) {
                 ctx.beginPath();
                 ctx.arc(x, y, radius, startAngle, endAngle, false);
-                ctx.lineWidth = radius * 3;
+                ctx.lineWidth = radius * 2.5;
                 ctx.strokeStyle = bg;
 
-                ctx.font = "18px Roboto";
+                ctx.font = "15px Roboto";
                 ctx.fillStyle = color;
                 ctx.stroke();
                 ctx.shadowOffsetX = 1;
@@ -238,7 +238,7 @@ export default function Page() {
                     width="500"
                     height="500"
                     style={{
-                        marginTop: 180,
+                        marginTop: 150,
                         WebkitTransform: `rotate(${rotate}deg)`,
                         WebkitTransition: `-webkit-transform ${easeOut}s ease-out`,
                     }}
@@ -248,7 +248,7 @@ export default function Page() {
                     <>
                         <Image
                             src="/images/pointer.png"
-                            style={{ position: "absolute", top: 210, width: 30 }}
+                            style={{ position: "absolute", top: 210, width: 20 }}
                             onClick={spin}
                             alt="Pointer"
                         />
@@ -265,7 +265,7 @@ export default function Page() {
                 {result > -1 && (
                     <>
                         <Image src="/images/confetti.gif" alt="Confetti" height={750} style={{ position: "absolute", top: 0, }} />
-                        <Heading color="red.700" size="xl" style={{ marginTop: -40 }}>CONGRATULATIONS! YOU WON</Heading>
+                        <Heading color="red.700" size="xl" style={{ marginTop: -50 }}>CONGRATULATIONS! YOU WON</Heading>
                         <Center bg="red.700" color='white' width='60%' pb={1}>
                             <Heading color="white" size="xl">{data[result].label.toUpperCase()}</Heading>
                         </Center>
