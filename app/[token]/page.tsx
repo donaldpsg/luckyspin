@@ -225,8 +225,8 @@ export default function Page() {
                         </Flex>
                     ) : (
                         <>
-                            <Heading size="xl" style={{ position: "absolute", top: 130 }} className={roboto.className} color="red.700">HI, {nama_client.toUpperCase()}</Heading>
-                            <Center style={{ position: "absolute", top: 160 }} bg="red.700" color='white' width='60%'>
+                            <Heading size="xl" style={{ position: "absolute", top: 110 }} className={roboto.className} color="red.700">HI, {nama_client.toUpperCase()}</Heading>
+                            <Center style={{ position: "absolute", top: 140 }} bg="red.700" color='white' width='60%'>
                                 <Heading className={roboto.className} letterSpacing={1}> Spin the wheel to win!</Heading>
                             </Center>
                         </>
@@ -238,7 +238,7 @@ export default function Page() {
                     width="500"
                     height="500"
                     style={{
-                        marginTop: 150,
+                        marginTop: 130,
                         WebkitTransform: `rotate(${rotate}deg)`,
                         WebkitTransition: `-webkit-transform ${easeOut}s ease-out`,
                     }}
@@ -248,13 +248,13 @@ export default function Page() {
                     <>
                         <Image
                             src="/images/pointer.png"
-                            style={{ position: "absolute", top: 210, width: 20 }}
+                            style={{ position: "absolute", top: 190, width: 20 }}
                             onClick={spin}
                             alt="Pointer"
                         />
                         <Image
                             src={logo}
-                            style={{ position: "absolute", top: 355, width: 80 }}
+                            style={{ position: "absolute", top: 335, width: 80 }}
                             onClick={spin}
                             alt="Logo"
                         />
