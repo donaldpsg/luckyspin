@@ -1,6 +1,7 @@
 "use client";
 
-import { VStack, Center, Image, Heading, Spinner, Flex, Link, Text } from "@chakra-ui/react";
+import { VStack, Center, Image, Heading, Spinner, Flex, Text, Link } from "@chakra-ui/react";
+import { Button } from "@/components/ui/button"
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useParams } from 'next/navigation'
 import { Roboto } from 'next/font/google'
@@ -28,16 +29,16 @@ export default function Page() {
 
     const radius = 75;
     const data = useMemo(() => [
-        { label: "Discount 5%", bg: "#ef7b7b", color: "#000" },
-        { label: "T-Shirt", bg: "#258261", color: "#fff" },
-        { label: "Calendar", bg: "#dc332e", color: "#fff" },
-        { label: "Umbrella", bg: "#fff", color: "#000" },
-        { label: "Discount 12%", bg: "#FFD700", color: "#000" },
-        { label: "Discount 5%", bg: "#ef7b7b", color: "#000" },
-        { label: "T-Shirt", bg: "#258261", color: "#fff" },
-        { label: "Calendar", bg: "#dc332e", color: "#fff" },
-        { label: "Umbrella", bg: "#fff", color: "#000" },
-        { label: "Discount 10%", bg: "#e5a01d", color: "#fff" },
+        { label: "Discount 5%", bg: "#ef7b7b", color: "#000", type: 0 },
+        { label: "T-Shirt", bg: "#258261", color: "#fff", type: 1 },
+        { label: "Calendar", bg: "#dc332e", color: "#fff", type: 1 },
+        { label: "Umbrella", bg: "#fff", color: "#000", type: 1 },
+        { label: "Discount 12%", bg: "#FFD700", color: "#000", type: 0 },
+        { label: "Discount 5%", bg: "#ef7b7b", color: "#000", type: 0 },
+        { label: "T-Shirt", bg: "#258261", color: "#fff", type: 1 },
+        { label: "Calendar", bg: "#dc332e", color: "#fff", type: 1 },
+        { label: "Umbrella", bg: "#fff", color: "#000", type: 1 },
+        { label: "Discount 10%", bg: "#e5a01d", color: "#fff", type: 0 },
     ], []); //
 
     const topPosition = (num: number, angle: number) => {
@@ -254,7 +255,7 @@ export default function Page() {
                         />
                         <Image
                             src={logo}
-                            style={{ position: "absolute", top: 330, width: 80 }}
+                            style={{ position: "absolute", top: 310, width: 90 }}
                             onClick={spin}
                             alt="Logo"
                         />
@@ -264,21 +265,28 @@ export default function Page() {
 
                 {result > -1 && (
                     <>
-                        <Image src="/images/confetti.gif" alt="Confetti" height={690} style={{ position: "absolute", top: 0, left: 250 }} />
-                        <Image src="/images/confetti.gif" alt="Confetti" height={690} style={{ position: "absolute", top: 0, right: 250 }} />
-                        <Heading color="red.700" size="md" style={{ marginTop: -70 }}>CONGRATULATIONS! YOU WON</Heading>
+                        <Image src="/images/confetti.gif" alt="Confetti" height={620} style={{ position: "absolute", top: 0, left: 250 }} />
+                        <Image src="/images/confetti.gif" alt="Confetti" height={620} style={{ position: "absolute", top: 0, right: 250 }} />
+                        <Heading color="red.700" size="md" style={{ marginTop: -60 }}>CONGRATULATIONS! YOU WON</Heading>
                         <Center bg="red.700" color='white' width='60%' style={{ marginTop: -10 }}>
                             <Heading color="white" size="md">{data[result].label.toUpperCase()}</Heading>
                         </Center>
-                        <Text style={{ textAlign: "center" }} px={8}>
-                            Your reward has been recorded. Or you can send the result directly to us.
-                        </Text>
+                        {data[result].type === 0 ? (
+                            <Text style={{ textAlign: "center" }} px={8} fontSize={14}>
+                                Your reward has been recorded or you can send the result directly to us. Share the joy with us on Instagram <Link href="https://instagram.com/peaksolutionsgroup?igshid=YmMyMTA2M2Y=" color="red.700">@peakasolutionsgroup</Link>!
+                            </Text>
+                        ) : (
+                            <Text style={{ textAlign: "center" }} px={8} fontSize={14}>
+                                Your reward has been recorded. The prize is waiting! Claim your prize at our office and share the joy with us on Instagram <Link href="https://instagram.com/peaksolutionsgroup?igshid=YmMyMTA2M2Y=" color="red.700">@peakasolutionsgroup</Link>!
+                            </Text>
+                        )}
+
 
                     </>
                 )}
 
                 {result > -1 && (
-                    <Link color="red.700" mb={2} onClick={download}>Download Result</Link>
+                    <Button colorPalette="red" variant="outline" mb={2} onClick={download}>Download Result</Button>
                 )}
 
             </VStack>
