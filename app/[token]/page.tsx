@@ -225,9 +225,9 @@ export default function Page() {
                         </Flex>
                     ) : (
                         <>
-                            <Heading size="xl" style={{ position: "absolute", top: 105 }} className={roboto.className} color="red.700">HI, {nama_client.toUpperCase()}</Heading>
-                            <Center style={{ position: "absolute", top: 135 }} bg="red.700" color='white' width='60%'>
-                                <Heading className={roboto.className} letterSpacing={1}> Spin the wheel to win!</Heading>
+                            <Heading size="lg" style={{ position: "absolute", top: 105 }} className={roboto.className} color="red.700">HI, {nama_client.toUpperCase()}</Heading>
+                            <Center style={{ position: "absolute", top: 130 }} bg="red.700" color='white' width='60%'>
+                                <Heading className={roboto.className} letterSpacing={0.5} size="lg"> Spin the wheel to win!</Heading>
                             </Center>
                         </>
                     )
@@ -238,7 +238,7 @@ export default function Page() {
                     width="500"
                     height="500"
                     style={{
-                        marginTop: 120,
+                        marginTop: 110,
                         WebkitTransform: `rotate(${rotate}deg)`,
                         WebkitTransition: `-webkit-transform ${easeOut}s ease-out`,
                     }}
@@ -248,13 +248,13 @@ export default function Page() {
                     <>
                         <Image
                             src="/images/pointer.png"
-                            style={{ position: "absolute", top: 180, width: 20 }}
+                            style={{ position: "absolute", top: 170, width: 20 }}
                             onClick={spin}
                             alt="Pointer"
                         />
                         <Image
                             src={logo}
-                            style={{ position: "absolute", top: 335, width: 80 }}
+                            style={{ position: "absolute", top: 330, width: 80 }}
                             onClick={spin}
                             alt="Logo"
                         />
@@ -266,9 +266,9 @@ export default function Page() {
                     <>
                         <Image src="/images/confetti.gif" alt="Confetti" height={690} style={{ position: "absolute", top: 0, left: 250 }} />
                         <Image src="/images/confetti.gif" alt="Confetti" height={690} style={{ position: "absolute", top: 0, right: 250 }} />
-                        <Heading color="red.700" size="xl" style={{ marginTop: -60 }}>CONGRATULATIONS! YOU WON</Heading>
-                        <Center bg="red.700" color='white' width='60%' pb={1}>
-                            <Heading color="white" size="xl">{data[result].label.toUpperCase()}</Heading>
+                        <Heading color="red.700" size="md" style={{ marginTop: -70 }}>CONGRATULATIONS! YOU WON</Heading>
+                        <Center bg="red.700" color='white' width='60%' style={{ marginTop: -10 }}>
+                            <Heading color="white" size="md">{data[result].label.toUpperCase()}</Heading>
                         </Center>
                         <Text style={{ textAlign: "center" }} px={8}>
                             Your reward has been recorded. Or you can send the result directly to us.
