@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@boriska420/react-custom-roulette": "^1.4.2",
     "@chakra-ui/cli": "^3.2.0",
     "@chakra-ui/react": "^3.2.0",
     "@emotion/react": "^11.13.5",
