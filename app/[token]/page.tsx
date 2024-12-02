@@ -214,7 +214,7 @@ export default function Page() {
 
     return (
         <div style={{ background: "#f8f4f0" }}>
-            <VStack id="result" style={{ backgroundImage: "url(images/background.png)", backgroundSize: "cover", backgroundPosition: "center", height: '100vh' }}>
+            <VStack id="result" style={{ backgroundImage: "url(images/background.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
                 {loading ?
                     (
                         <Flex
