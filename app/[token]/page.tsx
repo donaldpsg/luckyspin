@@ -30,12 +30,12 @@ export default function Page() {
     const radius = 75;
     const data = useMemo(() => [
         { label: "Discount 5%", bg: "#e50305", color: "#000", type: 0 },
-        { label: "Peak T-Shirt", bg: "#fff", color: "#000", type: 1 },
+        { label: "Calendar", bg: "#fff", color: "#000", type: 1 },
         { label: "Hampers", bg: "#e50305", color: "#fff", type: 1 },
         { label: "Umbrella", bg: "#fff", color: "#000", type: 1 },
         { label: "Discount 12%", bg: "#e50305", color: "#000", type: 0 },
         { label: "Discount 5%", bg: "#fff", color: "#000", type: 0 },
-        { label: "Peak T-Shirt", bg: "#e50305", color: "#fff", type: 1 },
+        { label: "Calendar", bg: "#e50305", color: "#fff", type: 1 },
         { label: "Hampers", bg: "#fff", color: "#000", type: 1 },
         { label: "Umbrella", bg: "#e50305", color: "#000", type: 1 },
         { label: "Discount 10%", bg: "#fff", color: "#000", type: 0 },
